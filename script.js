@@ -20,9 +20,24 @@ btn.addEventListener("click", function () {
     box.innerHTML = i;
     // agiungo la classe box al div
     box.classList.add("box");
+    const bomb = document.createElement("bomb");
+    // se la classe bomb include i
+    if (bombs.includes(i)) {
+      // allora aggiungo la classe bomb
+      box.classList.add("bomb");
+    }
     // preso div col id grid
     const grid = document.getElementById("grid");
     // inserito il box dentro il grid
     grid.append(box);
+    // aggiungo eventlistener al click
+    box.addEventListener("click, boxClick");
   }
 });
+function boxClick() {
+  const randomNumber = Math.floor(Math.random() * (16 - 1 + 1)) + 1;
+  if (this.classList.contain("bomb")) this.classList.add("red");
+  else this.classList.add("green");
+  return boxClick;
+  console.log(randomNumber);
+}
