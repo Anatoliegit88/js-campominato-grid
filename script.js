@@ -21,8 +21,9 @@ btn.addEventListener("click", function () {
     // agiungo la classe box al div
     box.classList.add("box");
     const bomb = document.createElement("bomb");
+    console.log(bomb);
     // se la classe bomb include i
-    if (bombs.includes(i)) {
+    if (bomb.includes(i)) {
       // allora aggiungo la classe bomb
       box.classList.add("bomb");
     }
